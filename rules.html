@@ -1,0 +1,440 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        'sosaria-gold': '#c5a059',
+                        'sosaria-dark': '#1a1510',
+                        'sosaria-brown': '#3e2b22',
+                    },
+                    fontFamily: {
+                        'medieval': ['"Cinzel"', 'serif'],
+                        'body': ['"Lora"', 'serif'],
+                    }
+                }
+            }
+        }
+    </script>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;700&family=Lora:ital,wght@0,400;0,700;1,400&display=swap"
+        rel="stylesheet">
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <title>Age of Sosaria</title>
+
+</head>
+
+<body class="bg-[#050505] text-stone-200 font-body antialiased selection:bg-sosaria-gold selection:text-black">
+
+    <div class="min-h-screen bg-[url('assets/bg.png')] bg-cover bg-center bg-no-repeat bg-fixed relative">
+        <!-- Dark Overlay for Readability -->
+        <div class="absolute inset-0 bg-black/40 pointer-events-none"></div>
+
+        <div class="relative z-10 container mx-auto">
+            <header
+                class="w-full pt-4 pb-4 border-b border-white/10 bg-gradient-to-b from-black/80 to-transparent relative z-50">
+                <nav class="flex flex-col items-center justify-between px-6 md:px-12">
+                    <!-- Logo -->
+                    <div class="flex items-center items-center gap-4 z-50 px-4">
+                        <img src="assets/logo.png" alt="Age of Sosaria Logo"
+                            class="h-12 md:h-20 w-auto drop-shadow-lg filter brightness-110">
+                        <h1
+                            class="font-medieval text-2xl md:text-4xl text-sosaria-gold tracking-widest drop-shadow-[0_2px_4px_rgba(0,0,0,1)]">
+                            Age of Sosaria
+                        </h1>
+                    </div>
+
+                    <!-- Mobile Menu Button (Hamburger) -->
+                    <button id="mobile-menu-btn"
+                        class="md:hidden text-sosaria-gold text-3xl focus:outline-none z-50 transform hover:scale-110 transition-transform">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8" fill="none" viewBox="0 0 24 24"
+                            stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                d="M4 6h16M4 12h16M4 18h16" />
+                        </svg>
+                    </button>
+
+                    <!-- Desktop Menu -->
+                    <div class="hidden md:block">
+                        <ul
+                            class="flex items-center gap-8 font-medieval text-sm tracking-widest text-stone-400 uppercase font-bold">
+                            <li><a href="index.html"
+                                    class="nav-link hover:text-sosaria-gold hover:scale-105 transition-all duration-300">Home</a>
+                            </li>
+                            <li><a href="getting-started.html"
+                                    class="nav-link hover:text-sosaria-gold hover:scale-105 transition-all duration-300">Getting
+                                    Started</a></li>
+                            <li><a href="rules.html"
+                                    class="nav-link hover:text-sosaria-gold hover:scale-105 transition-all duration-300">Rules</a>
+                            </li>
+                            <li><a href="contact.html"
+                                    class="nav-link hover:text-sosaria-gold hover:scale-105 transition-all duration-300">Contact
+                                    Us</a></li>
+                            <li><a href="about.html"
+                                    class="nav-link hover:text-sosaria-gold hover:scale-105 transition-all duration-300">About
+                                    Us</a></li>
+                        </ul>
+                    </div>
+
+                    <!-- Mobile Menu Overlay -->
+                    <div id="mobile-menu-overlay"
+                        class="fixed inset-0 bg-black/80 backdrop-blur-sm z-[90] hidden opacity-0 transition-opacity duration-300">
+                    </div>
+
+                    <!-- Mobile Menu Drawer (Z-Index 100, Width optimized) -->
+                    <div id="mobile-menu"
+                        class="fixed inset-y-0 right-0 z-[100] w-full sm:w-[400px] bg-[#0a0a0a] border-l border-white/10 transform translate-x-full transition-transform duration-300 ease-in-out shadow-2xl flex flex-col md:hidden">
+
+                        <!-- Internal Header (Logo + Close Button) -->
+                        <div class="flex items-center justify-between p-6 border-b border-white/5 bg-black/50">
+                            <div class="flex items-center gap-3">
+                                <img src="assets/logo.png" alt="Logo" class="h-10 w-auto">
+                                <span class="font-medieval text-xl text-sosaria-gold tracking-widest">Age of
+                                    Sosaria</span>
+                            </div>
+                            <button id="close-menu-btn" class="text-stone-400 hover:text-white transition-colors">
+                                <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8" fill="none" viewBox="0 0 24 24"
+                                    stroke="currentColor">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                        d="M6 18L18 6M6 6l12 12" />
+                                </svg>
+                            </button>
+                        </div>
+
+                        <!-- Menu Content -->
+                        <div
+                            class="flex-1 overflow-y-auto p-8 flex flex-col pt-12 space-y-8 bg-[url('assets/bg.png')] bg-cover bg-center relative">
+                            <div class="absolute inset-0 bg-black/95 pointer-events-none"></div>
+
+                            <!-- Large Nav Links -->
+                            <div class="relative z-10 flex flex-col space-y-6">
+                                <a href="index.html"
+                                    class="nav-link mobile-link text-4xl font-light tracking-tighter text-stone-300 transition-all duration-300 hover:text-sosaria-gold hover:italic hover:translate-x-2">Home</a>
+                                <a href="getting-started.html"
+                                    class="nav-link mobile-link text-4xl font-light tracking-tighter text-stone-300 transition-all duration-300 hover:text-sosaria-gold hover:italic hover:translate-x-2">Getting
+                                    Started</a>
+                                <a href="rules.html"
+                                    class="nav-link mobile-link text-4xl font-light tracking-tighter text-stone-300 transition-all duration-300 hover:text-sosaria-gold hover:italic hover:translate-x-2">Rules</a>
+                                <a href="contact.html"
+                                    class="nav-link mobile-link text-4xl font-light tracking-tighter text-stone-300 transition-all duration-300 hover:text-sosaria-gold hover:italic hover:translate-x-2">Contact
+                                    Us</a>
+                                <a href="about.html"
+                                    class="nav-link mobile-link text-4xl font-light tracking-tighter text-stone-300 transition-all duration-300 hover:text-sosaria-gold hover:italic hover:translate-x-2">About
+                                    Us</a>
+                            </div>
+
+                            <!-- Footer / Connect -->
+                            <div class="relative z-10 mt-auto pt-10">
+                                <div class="h-px w-full bg-white/10 mb-8"></div>
+                                <p class="text-[10px] text-stone-500 uppercase tracking-[0.2em] font-bold mb-4">Connect
+                                </p>
+                                <div class="flex flex-col gap-3">
+                                    <span
+                                        class="text-sm font-medium text-stone-400 cursor-pointer hover:text-sosaria-gold hover:underline underline-offset-4 transition-colors">Twitter</span>
+                                    <span
+                                        class="text-sm font-medium text-stone-400 cursor-pointer hover:text-sosaria-gold hover:underline underline-offset-4 transition-colors">Instagram</span>
+                                    <span
+                                        class="text-sm font-medium text-stone-400 cursor-pointer hover:text-sosaria-gold hover:underline underline-offset-4 transition-colors">GitHub</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </nav>
+            </header>
+
+            <main class="min-h-[80vh] flex flex-col items-center justify-center px-4 py-12 text-center">
+                <section class="max-w-6xl w-full space-y-12">
+
+                    <!-- Header Section -->
+                    <div class="space-y-4">
+                        <h1
+                            class="font-medieval text-5xl md:text-6xl text-sosaria-gold drop-shadow-[0_4px_4px_rgba(0,0,0,0.8)]">
+                            Official Rules</h1>
+                        <p class="text-stone-400 font-mono text-sm tracking-widest uppercase">Last updated: v1.0</p>
+                        <p class="max-w-3xl mx-auto text-lg md:text-xl text-stone-300 font-body leading-relaxed">
+                            Age of Sosaria is a long-term, custom Ultima Online shard focused on meaningful progression,
+                            fair play, and a healthy community. <br>
+                            <span class="text-red-400 italic">Failure to follow these rules may result in warnings,
+                                suspensions, or permanent bans.</span>
+                        </p>
+                    </div>
+
+                    <!-- Rules Grid -->
+                    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 text-left">
+
+                        <!-- Rule 1 -->
+                        <div
+                            class="group relative overflow-hidden rounded-xl border border-white/10 hover:border-sosaria-gold/50 transition-all duration-300 hover:-translate-y-1 hover:shadow-[0_0_20px_rgba(197,160,89,0.2)] bg-[#1a1510]">
+                            <!-- Background Image -->
+                            <div
+                                class="absolute inset-0 bg-[url('assets/section-bg.png')] bg-cover bg-center opacity-20 group-hover:opacity-30 transition-opacity duration-300">
+                            </div>
+                            <!-- Dark Gradient Overlay -->
+                            <div class="absolute inset-0 bg-gradient-to-b from-black/80 via-black/60 to-black/90"></div>
+
+                            <!-- Content -->
+                            <div class="relative z-10 p-6 h-full flex flex-col">
+                                <div class="mb-4 flex items-center gap-3">
+                                    <span
+                                        class="flex items-center justify-center w-8 h-8 rounded-full border border-sosaria-gold text-sosaria-gold font-medieval font-bold text-lg bg-black/50">1</span>
+                                    <h3
+                                        class="font-medieval text-xl text-stone-100 group-hover:text-sosaria-gold transition-colors">
+                                        General Conduct</h3>
+                                </div>
+                                <div class="space-y-2 text-stone-400 text-sm font-body leading-relaxed">
+                                    <p>Players are expected to treat others with respect.</p>
+                                    <p>Harassment, hate speech, threats, or real-world targeting are not tolerated.</p>
+                                    <p>Disagreements and competition are part of the game; personal attacks are not.</p>
+                                    <p class="text-xs text-stone-500 italic mt-2">Staff reserves the right to take
+                                        action against behavior that harms the community.</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Rule 2 -->
+                        <div
+                            class="group relative overflow-hidden rounded-xl border border-white/10 hover:border-sosaria-gold/50 transition-all duration-300 hover:-translate-y-1 hover:shadow-[0_0_20px_rgba(197,160,89,0.2)] bg-[#1a1510]">
+                            <div
+                                class="absolute inset-0 bg-[url('assets/section-bg.png')] bg-cover bg-center opacity-20 group-hover:opacity-30 transition-opacity duration-300">
+                            </div>
+                            <div class="absolute inset-0 bg-gradient-to-b from-black/80 via-black/60 to-black/90"></div>
+                            <div class="relative z-10 p-6 h-full flex flex-col">
+                                <div class="mb-4 flex items-center gap-3">
+                                    <span
+                                        class="flex items-center justify-center w-8 h-8 rounded-full border border-sosaria-gold text-sosaria-gold font-medieval font-bold text-lg bg-black/50">2</span>
+                                    <h3
+                                        class="font-medieval text-xl text-stone-100 group-hover:text-sosaria-gold transition-colors">
+                                        Exploits, Bugs, & Abuse</h3>
+                                </div>
+                                <div class="space-y-2 text-stone-400 text-sm font-body leading-relaxed">
+                                    <p>Exploiting bugs or unintended behavior is prohibited.</p>
+                                    <p>Duping or system abuse will result in severe penalties.</p>
+                                    <p>Players are encouraged to report bugs immediately.</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Rule 3 -->
+                        <div
+                            class="group relative overflow-hidden rounded-xl border border-white/10 hover:border-sosaria-gold/50 transition-all duration-300 hover:-translate-y-1 hover:shadow-[0_0_20px_rgba(197,160,89,0.2)] bg-[#1a1510]">
+                            <div
+                                class="absolute inset-0 bg-[url('assets/section-bg.png')] bg-cover bg-center opacity-20 group-hover:opacity-30 transition-opacity duration-300">
+                            </div>
+                            <div class="absolute inset-0 bg-gradient-to-b from-black/80 via-black/60 to-black/90"></div>
+                            <div class="relative z-10 p-6 h-full flex flex-col">
+                                <div class="mb-4 flex items-center gap-3">
+                                    <span
+                                        class="flex items-center justify-center w-8 h-8 rounded-full border border-sosaria-gold text-sosaria-gold font-medieval font-bold text-lg bg-black/50">3</span>
+                                    <h3
+                                        class="font-medieval text-xl text-stone-100 group-hover:text-sosaria-gold transition-colors">
+                                        Software & Automation</h3>
+                                </div>
+                                <div class="space-y-2 text-stone-400 text-sm font-body leading-relaxed">
+                                    <p>Unauthorized automation or scripts are prohibited.</p>
+                                    <p>Macros must comply with server limits.</p>
+                                    <p>Unfair AFK progression may be penalized.</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Rule 4 -->
+                        <div
+                            class="group relative overflow-hidden rounded-xl border border-white/10 hover:border-sosaria-gold/50 transition-all duration-300 hover:-translate-y-1 hover:shadow-[0_0_20px_rgba(197,160,89,0.2)] bg-[#1a1510]">
+                            <div
+                                class="absolute inset-0 bg-[url('assets/section-bg.png')] bg-cover bg-center opacity-20 group-hover:opacity-30 transition-opacity duration-300">
+                            </div>
+                            <div class="absolute inset-0 bg-gradient-to-b from-black/80 via-black/60 to-black/90"></div>
+                            <div class="relative z-10 p-6 h-full flex flex-col">
+                                <div class="mb-4 flex items-center gap-3">
+                                    <span
+                                        class="flex items-center justify-center w-8 h-8 rounded-full border border-sosaria-gold text-sosaria-gold font-medieval font-bold text-lg bg-black/50">4</span>
+                                    <h3
+                                        class="font-medieval text-xl text-stone-100 group-hover:text-sosaria-gold transition-colors">
+                                        Accounts</h3>
+                                </div>
+                                <div class="space-y-2 text-stone-400 text-sm font-body leading-relaxed">
+                                    <p><span class="text-white font-bold">Max 3 accounts</span> per player.</p>
+                                    <p>Account limit circumvention is not allowed.</p>
+                                    <p class="italic">All accounts are treated as one for enforcement.</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Rule 5 -->
+                        <div
+                            class="group relative overflow-hidden rounded-xl border border-white/10 hover:border-sosaria-gold/50 transition-all duration-300 hover:-translate-y-1 hover:shadow-[0_0_20px_rgba(197,160,89,0.2)] bg-[#1a1510]">
+                            <div
+                                class="absolute inset-0 bg-[url('assets/section-bg.png')] bg-cover bg-center opacity-20 group-hover:opacity-30 transition-opacity duration-300">
+                            </div>
+                            <div class="absolute inset-0 bg-gradient-to-b from-black/80 via-black/60 to-black/90"></div>
+                            <div class="relative z-10 p-6 h-full flex flex-col">
+                                <div class="mb-4 flex items-center gap-3">
+                                    <span
+                                        class="flex items-center justify-center w-8 h-8 rounded-full border border-sosaria-gold text-sosaria-gold font-medieval font-bold text-lg bg-black/50">5</span>
+                                    <h3
+                                        class="font-medieval text-xl text-stone-100 group-hover:text-sosaria-gold transition-colors">
+                                        PvP & Interaction</h3>
+                                </div>
+                                <div class="space-y-2 text-stone-400 text-sm font-body leading-relaxed">
+                                    <p>PvP is allowed where game rules permit it.</p>
+                                    <p>Griefing or harassment-focused behavior may be penalized.</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Rule 6 -->
+                        <div
+                            class="group relative overflow-hidden rounded-xl border border-white/10 hover:border-sosaria-gold/50 transition-all duration-300 hover:-translate-y-1 hover:shadow-[0_0_20px_rgba(197,160,89,0.2)] bg-[#1a1510]">
+                            <div
+                                class="absolute inset-0 bg-[url('assets/section-bg.png')] bg-cover bg-center opacity-20 group-hover:opacity-30 transition-opacity duration-300">
+                            </div>
+                            <div class="absolute inset-0 bg-gradient-to-b from-black/80 via-black/60 to-black/90"></div>
+                            <div class="relative z-10 p-6 h-full flex flex-col">
+                                <div class="mb-4 flex items-center gap-3">
+                                    <span
+                                        class="flex items-center justify-center w-8 h-8 rounded-full border border-sosaria-gold text-sosaria-gold font-medieval font-bold text-lg bg-black/50">6</span>
+                                    <h3
+                                        class="font-medieval text-xl text-stone-100 group-hover:text-sosaria-gold transition-colors">
+                                        Housing</h3>
+                                </div>
+                                <div class="space-y-2 text-stone-400 text-sm font-body leading-relaxed">
+                                    <p>Housing abuse or disruptive placement is prohibited.</p>
+                                    <p>Staff may remove structures harming gameplay or blocking vital areas.</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Rule 7 -->
+                        <div
+                            class="group relative overflow-hidden rounded-xl border border-white/10 hover:border-sosaria-gold/50 transition-all duration-300 hover:-translate-y-1 hover:shadow-[0_0_20px_rgba(197,160,89,0.2)] bg-[#1a1510]">
+                            <div
+                                class="absolute inset-0 bg-[url('assets/section-bg.png')] bg-cover bg-center opacity-20 group-hover:opacity-30 transition-opacity duration-300">
+                            </div>
+                            <div class="absolute inset-0 bg-gradient-to-b from-black/80 via-black/60 to-black/90"></div>
+                            <div class="relative z-10 p-6 h-full flex flex-col">
+                                <div class="mb-4 flex items-center gap-3">
+                                    <span
+                                        class="flex items-center justify-center w-8 h-8 rounded-full border border-sosaria-gold text-sosaria-gold font-medieval font-bold text-lg bg-black/50">7</span>
+                                    <h3
+                                        class="font-medieval text-xl text-stone-100 group-hover:text-sosaria-gold transition-colors">
+                                        Economy & Trading</h3>
+                                </div>
+                                <div class="space-y-2 text-stone-400 text-sm font-body leading-relaxed">
+                                    <p><span class="text-red-400 font-bold">RMT (Real-Money Trading) is
+                                            prohibited.</span></p>
+                                    <p>Legitimate in-game trading is encouraged.</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Rule 8 -->
+                        <div
+                            class="group relative overflow-hidden rounded-xl border border-white/10 hover:border-sosaria-gold/50 transition-all duration-300 hover:-translate-y-1 hover:shadow-[0_0_20px_rgba(197,160,89,0.2)] bg-[#1a1510]">
+                            <div
+                                class="absolute inset-0 bg-[url('assets/section-bg.png')] bg-cover bg-center opacity-20 group-hover:opacity-30 transition-opacity duration-300">
+                            </div>
+                            <div class="absolute inset-0 bg-gradient-to-b from-black/80 via-black/60 to-black/90"></div>
+                            <div class="relative z-10 p-6 h-full flex flex-col">
+                                <div class="mb-4 flex items-center gap-3">
+                                    <span
+                                        class="flex items-center justify-center w-8 h-8 rounded-full border border-sosaria-gold text-sosaria-gold font-medieval font-bold text-lg bg-black/50">8</span>
+                                    <h3
+                                        class="font-medieval text-xl text-stone-100 group-hover:text-sosaria-gold transition-colors">
+                                        Account Security</h3>
+                                </div>
+                                <div class="space-y-2 text-stone-400 text-sm font-body leading-relaxed">
+                                    <p>Players are responsible for their own accounts.</p>
+                                    <p>Losses from account sharing or negligence will <span
+                                            class="text-red-400">not</span> be restored.</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Rule 9 -->
+                        <div
+                            class="group relative overflow-hidden rounded-xl border border-white/10 hover:border-sosaria-gold/50 transition-all duration-300 hover:-translate-y-1 hover:shadow-[0_0_20px_rgba(197,160,89,0.2)] bg-[#1a1510]">
+                            <div
+                                class="absolute inset-0 bg-[url('assets/section-bg.png')] bg-cover bg-center opacity-20 group-hover:opacity-30 transition-opacity duration-300">
+                            </div>
+                            <div class="absolute inset-0 bg-gradient-to-b from-black/80 via-black/60 to-black/90"></div>
+                            <div class="relative z-10 p-6 h-full flex flex-col">
+                                <div class="mb-4 flex items-center gap-3">
+                                    <span
+                                        class="flex items-center justify-center w-8 h-8 rounded-full border border-sosaria-gold text-sosaria-gold font-medieval font-bold text-lg bg-black/50">9</span>
+                                    <h3
+                                        class="font-medieval text-xl text-stone-100 group-hover:text-sosaria-gold transition-colors">
+                                        Staff Authority</h3>
+                                </div>
+                                <div class="space-y-2 text-stone-400 text-sm font-body leading-relaxed">
+                                    <p>Staff decisions are final.</p>
+                                    <p>Punishments range from verbal warnings to permanent bans depending on severity.
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Rule 10 -->
+                        <div
+                            class="group relative overflow-hidden rounded-xl border border-white/10 hover:border-sosaria-gold/50 transition-all duration-300 hover:-translate-y-1 hover:shadow-[0_0_20px_rgba(197,160,89,0.2)] bg-[#1a1510]">
+                            <div
+                                class="absolute inset-0 bg-[url('assets/section-bg.png')] bg-cover bg-center opacity-20 group-hover:opacity-30 transition-opacity duration-300">
+                            </div>
+                            <div class="absolute inset-0 bg-gradient-to-b from-black/80 via-black/60 to-black/90"></div>
+                            <div class="relative z-10 p-6 h-full flex flex-col">
+                                <div class="mb-4 flex items-center gap-3">
+                                    <span
+                                        class="flex items-center justify-center w-8 h-8 rounded-full border border-sosaria-gold text-sosaria-gold font-medieval font-bold text-lg bg-black/50">10</span>
+                                    <h3
+                                        class="font-medieval text-xl text-stone-100 group-hover:text-sosaria-gold transition-colors">
+                                        Development</h3>
+                                </div>
+                                <div class="space-y-2 text-stone-400 text-sm font-body leading-relaxed">
+                                    <p>The shard is under active development.</p>
+                                    <p>Systems and balance may change.</p>
+                                    <p>Rollbacks or wipes may occur if absolutely necessary.</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Rule 11 -->
+                        <div
+                            class="group relative overflow-hidden rounded-xl border border-sosaria-gold/30 hover:border-sosaria-gold transition-all duration-300 hover:-translate-y-1 hover:shadow-[0_0_30px_rgba(197,160,89,0.3)] bg-gradient-to-br from-sosaria-gold/10 to-transparent md:col-span-2 lg:col-span-1">
+                            <div
+                                class="absolute inset-0 bg-[url('assets/section-bg.png')] bg-cover bg-center opacity-30 group-hover:opacity-40 transition-opacity duration-300">
+                            </div>
+                            <div class="absolute inset-0 bg-gradient-to-b from-black/70 via-black/50 to-black/80"></div>
+                            <div class="relative z-10 p-6 h-full flex flex-col justify-center items-center text-center">
+                                <div class="mb-4">
+                                    <span
+                                        class="inline-block px-4 py-1 rounded-full border border-sosaria-gold text-sosaria-gold font-medieval font-bold text-sm bg-black/60 uppercase tracking-widest">Final
+                                        Rule</span>
+                                </div>
+                                <h3
+                                    class="font-medieval text-2xl text-white mb-4 group-hover:text-sosaria-gold transition-colors">
+                                    Common Sense</h3>
+                                <p class="text-stone-300 font-body text-lg italic">"If you have to ask whether something
+                                    is allowed, it probably isn’t."</p>
+                            </div>
+                        </div>
+
+                    </div>
+                </section>
+            </main>
+
+            <footer class="w-full py-8 text-center border-t border-white/5 bg-black/80 backdrop-blur-md">
+                <p class="text-stone-500 text-xs font-medieval tracking-widest">
+                    &copy; 2024 Age of Sosaria. A Custom Ultima Online Shard.
+                </p>
+            </footer>
+        </div>
+    </div>
+    <script src="js/main.js"></script>
+</body>
+
+</html>
