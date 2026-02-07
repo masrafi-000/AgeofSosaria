@@ -45,7 +45,7 @@
                         <img src="assets/logo.png" alt="Age of Sosaria Logo"
                             class="h-12 md:h-20 w-auto drop-shadow-lg filter brightness-110">
                         <h1
-                            class="font-medieval text-2xl md:text-4xl text-sosaria-gold tracking-widest drop-shadow-[0_2px_4px_rgba(0,0,0,1)]">
+                            class="font-medieval text-2xl md:text-4xl text-gold-grunge tracking-widest drop-shadow-[0_2px_4px_rgba(0,0,0,1)]">
                             Age of Sosaria
                         </h1>
                     </div>
@@ -73,6 +73,9 @@
                             <li><a href="rules.html"
                                     class="nav-link hover:text-sosaria-gold hover:scale-105 transition-all duration-300">Rules</a>
                             </li>
+                            <li><a href="donate.html"
+                                    class="nav-link hover:text-sosaria-gold hover:scale-105 transition-all duration-300">Donate</a>
+                            </li>
                             <li><a href="contact.html"
                                     class="nav-link hover:text-sosaria-gold hover:scale-105 transition-all duration-300">Contact
                                     Us</a></li>
@@ -95,7 +98,7 @@
                         <div class="flex items-center justify-between p-6 border-b border-white/5 bg-black/50">
                             <div class="flex items-center gap-3">
                                 <img src="assets/logo.png" alt="Logo" class="h-10 w-auto">
-                                <span class="font-medieval text-xl text-sosaria-gold tracking-widest">Age of
+                                <span class="font-medieval text-xl text-gold-grunge tracking-widest">Age of
                                     Sosaria</span>
                             </div>
                             <button id="close-menu-btn" class="text-stone-400 hover:text-white transition-colors">
@@ -121,6 +124,8 @@
                                     Started</a>
                                 <a href="rules.html"
                                     class="nav-link mobile-link text-4xl font-light tracking-tighter text-stone-300 transition-all duration-300 hover:text-sosaria-gold hover:italic hover:translate-x-2">Rules</a>
+                                <a href="donate.html"
+                                    class="nav-link mobile-link text-4xl font-light tracking-tighter text-stone-300 transition-all duration-300 hover:text-sosaria-gold hover:italic hover:translate-x-2">Donate</a>
                                 <a href="contact.html"
                                     class="nav-link mobile-link text-4xl font-light tracking-tighter text-stone-300 transition-all duration-300 hover:text-sosaria-gold hover:italic hover:translate-x-2">Contact
                                     Us</a>
@@ -148,37 +153,155 @@
                 </nav>
             </header>
 
-            <main class="min-h-[80vh] flex flex-col items-center justify-center px-4 text-center">
-                <section
-                    class="max-w-4xl space-y-8 backdrop-blur-sm bg-black/60 p-8 md:p-12 rounded-xl border border-white/5 shadow-2xl w-full">
-                    <h1 class="font-medieval text-4xl md:text-5xl text-sosaria-gold mb-8 drop-shadow-md">Getting Started
-                    </h1>
+            <main class="min-h-[80vh] flex flex-col items-center justify-center px-4 py-12 text-center">
+                <section class="max-w-6xl w-full space-y-12">
 
-                    <div class="space-y-8 text-left">
-                        <div
-                            class="p-6 bg-white/5 rounded-lg border border-white/10 hover:border-sosaria-gold/50 transition-colors">
-                            <h2 class="font-medieval text-2xl text-stone-200 mb-2">1. Download the Client</h2>
-                            <p class="text-stone-400 font-body">Download our custom ClassicUO client launcher. It comes
-                                pre-configured with all necessary files to connect to Age of Sosaria.</p>
-                            <button
-                                class="mt-4 px-6 py-2 bg-sosaria-gold text-black font-bold font-medieval rounded hover:scale-105 transition-transform">Download
-                                Launcher</button>
-                        </div>
-
-                        <div
-                            class="p-6 bg-white/5 rounded-lg border border-white/10 hover:border-sosaria-gold/50 transition-colors">
-                            <h2 class="font-medieval text-2xl text-stone-200 mb-2">2. Create an Account</h2>
-                            <p class="text-stone-400 font-body">Accounts are auto-created on your first login. Simply
-                                enter your desired username and password. Keep it safe!</p>
-                        </div>
-
-                        <div
-                            class="p-6 bg-white/5 rounded-lg border border-white/10 hover:border-sosaria-gold/50 transition-colors">
-                            <h2 class="font-medieval text-2xl text-stone-200 mb-2">3. Join the Community</h2>
-                            <p class="text-stone-400 font-body">Join our Discord to meet other players, find a guild,
-                                and get live support from our staff.</p>
-                        </div>
+                    <!-- Header -->
+                    <div class="space-y-6">
+                        <h1
+                            class="font-medieval text-5xl md:text-6xl text-gold-grunge drop-shadow-[0_4px_4px_rgba(0,0,0,0.8)]">
+                            Getting Started</h1>
+                        <p class="max-w-3xl mx-auto text-lg md:text-xl text-stone-300 font-body leading-relaxed">
+                            Welcome to Age of Sosaria. Joining the world is quick and easy. <br>
+                            Just follow the steps below and you’ll be in-game within minutes.
+                        </p>
                     </div>
+
+                    <div class="grid grid-cols-1 lg:grid-cols-2 gap-8 text-left">
+
+                        <!-- Quick Start -->
+                        <div
+                            class="group relative overflow-hidden rounded-xl border border-sosaria-gold/50 bg-[#1a1510] shadow-[0_0_20px_rgba(197,160,89,0.1)]">
+                            <!-- Background Image -->
+                            <div
+                                class="absolute inset-0 bg-[url('assets/section-bg.png')] bg-cover bg-center opacity-20 group-hover:opacity-30 transition-opacity duration-300">
+                            </div>
+                            <div class="absolute inset-0 bg-gradient-to-b from-black/80 via-black/60 to-black/90"></div>
+
+                            <div class="relative z-10 p-8 flex flex-col h-full">
+                                <h2 class="font-medieval text-3xl text-gold-grunge mb-6 border-b border-white/10 pb-4">
+                                    Quick Start <span
+                                        class="text-xs font-sans text-stone-400 align-middle ml-2 tracking-widest uppercase">(Recommended)</span>
+                                </h2>
+
+                                <ul class="space-y-6 font-body text-stone-300 flex-1">
+                                    <li class="flex gap-4 items-start">
+                                        <span
+                                            class="flex-shrink-0 w-8 h-8 rounded-full bg-sosaria-gold text-black font-bold flex items-center justify-center font-medieval">1</span>
+                                        <span class="mt-1">Download the <strong class="text-white">Age of Sosaria
+                                                Installer</strong> from the Downloads page.</span>
+                                    </li>
+                                    <li class="flex gap-4 items-start">
+                                        <span
+                                            class="flex-shrink-0 w-8 h-8 rounded-full bg-sosaria-gold text-black font-bold flex items-center justify-center font-medieval">2</span>
+                                        <span class="mt-1">Run the installer.</span>
+                                    </li>
+                                    <li class="flex gap-4 items-start">
+                                        <span
+                                            class="flex-shrink-0 w-8 h-8 rounded-full bg-sosaria-gold text-black font-bold flex items-center justify-center font-medieval">3</span>
+                                        <span class="mt-1">Launch the Age of Sosaria Patcher.</span>
+                                    </li>
+                                    <li class="flex gap-4 items-start">
+                                        <span
+                                            class="flex-shrink-0 w-8 h-8 rounded-full bg-sosaria-gold text-black font-bold flex items-center justify-center font-medieval">4</span>
+                                        <span class="mt-1">Click <strong class="text-sosaria-gold">Play</strong> and
+                                            enter the world.</span>
+                                    </li>
+                                </ul>
+
+                                <a href="#"
+                                    class="mt-8 block w-full py-4 text-center bg-sosaria-gold text-black font-medieval text-xl font-bold rounded hover:bg-white transition-colors shadow-lg hover:shadow-sosaria-gold/50">
+                                    Download Installer
+                                </a>
+                            </div>
+                        </div>
+
+                        <!-- Manual Installation -->
+                        <div
+                            class="group relative overflow-hidden rounded-xl border border-white/10 bg-[#1a1510] hover:border-white/30 transition-colors">
+                            <div
+                                class="absolute inset-0 bg-[url('assets/section-bg.png')] bg-cover bg-center opacity-10 group-hover:opacity-20 transition-opacity duration-300">
+                            </div>
+                            <div class="absolute inset-0 bg-gradient-to-b from-black/90 via-black/80 to-black/95"></div>
+
+                            <div class="relative z-10 p-8 flex flex-col h-full">
+                                <h2 class="font-medieval text-2xl text-stone-400 mb-6 border-b border-white/10 pb-4">
+                                    Manual Installation <span
+                                        class="text-xs font-sans text-stone-600 align-middle ml-2 tracking-widest uppercase">(Advanced
+                                        Users)</span></h2>
+
+                                <h1 class="font-medieval text-4xl md:text-5xl text-gold-grunge mb-8 drop-shadow-md">
+                                    Getting Started</h1>
+
+                                <div class="grid md:grid-cols-2 gap-8 text-left">
+                                    <!-- Step 1 -->
+                                    <div
+                                        class="p-6 bg-black/40 rounded-lg border border-white/10 hover:border-sosaria-gold/50 transition-colors duration-300">
+                                        <h2 class="font-medieval text-2xl text-gold-grunge mb-4">1. Download & Install
+                                        </h2>
+                                        <p class="text-silver-grunge-body leading-relaxed">
+                                            Use the classic client or enhanced client. We recommend the <span
+                                                class="text-gold-grunge">ClassicUO</span> launcher for the best
+                                            experience.
+                                            Download the launcher and point it to our server address.
+                                        </p>
+                                        <a href="#"
+                                            class="text-gold-grunge hover:underline mt-4 inline-block font-bold">Download
+                                            Launcher &rarr;</a>
+                                    </div>
+
+                                    <!-- Step 2 -->
+                                    <div
+                                        class="p-6 bg-black/40 rounded-lg border border-white/10 hover:border-sosaria-gold/50 transition-colors duration-300">
+                                        <h2 class="font-medieval text-2xl text-gold-grunge mb-4">2. Create Account</h2>
+                                        <p class="text-silver-grunge-body leading-relaxed">
+                                            Accounts are automatically created on your first login. Choose a username
+                                            and password
+                                            that you will remember.
+                                        </p>
+                                        <p class="text-xs text-silver-grunge-body italic mt-2">* One account per IP
+                                            address allowed.</p>
+                                    </div>
+
+                                    <!-- Step 3 -->
+                                    <div
+                                        class="p-6 bg-black/40 rounded-lg border border-white/10 hover:border-sosaria-gold/50 transition-colors duration-300">
+                                        <h2 class="font-medieval text-2xl text-gold-grunge mb-4">3. Join Discord</h2>
+                                        <p class="text-silver-grunge-body leading-relaxed">
+                                            Stay connected with the community, get support, and see the latest patch
+                                            notes.
+                                        </p>
+                                        <a href="#"
+                                            class="text-gold-grunge hover:underline mt-4 inline-block font-bold">Join
+                                            Discord
+                                            &rarr;</a>
+                                    </div>
+
+                                    <!-- Step 4 -->
+                                    <div
+                                        class="p-6 bg-black/40 rounded-lg border border-white/10 hover:border-sosaria-gold/50 transition-colors duration-300">
+                                        <h2 class="font-medieval text-2xl text-gold-grunge mb-4">4. Server Rules</h2>
+                                        <p class="text-silver-grunge-body leading-relaxed">
+                                            Before you begin, familiarize yourself with our server rules to ensure a
+                                            fair environment for everyone.
+                                        </p>
+                                        <a href="rules.html"
+                                            class="text-gold-grunge hover:underline mt-4 inline-block font-bold">Read
+                                            Rules
+                                            &rarr;</a>
+                                    </div>
+                                </div> Join our community Discord. <br>
+                                Ask other players or staff for assistance.
+                                </p>
+                                <div class="pt-4">
+                                    <a href="#"
+                                        class="inline-block px-8 py-3 border border-sosaria-gold/30 text-sosaria-gold font-medieval hover:bg-sosaria-gold hover:text-black transition-all duration-300 rounded uppercase tracking-wider text-sm font-bold">
+                                        Join Discord
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+
                 </section>
             </main>
 

@@ -1,0 +1,150 @@
+/* Grunge Text Effects */
+
+/* Gold Grunge */
+.text-gold-grunge {
+  color: #c5a059; /* Fallback */
+  background-image: 
+        /* Scratches/Noise Overlay */
+    repeating-linear-gradient(
+      115deg,
+      transparent 0,
+      transparent 5px,
+      rgba(0, 0, 0, 0.2) 6px,
+      rgba(0, 0, 0, 0.3) 7px
+    ),
+    repeating-linear-gradient(
+      45deg,
+      transparent 0,
+      transparent 3px,
+      rgba(255, 255, 255, 0.1) 4px,
+      transparent 5px
+    ),
+    /* Metallic Gradient */
+    linear-gradient(
+        to bottom,
+        #f9d976 0%,
+        /* Light Gold */ #c5a059 30%,
+        /* Base Gold */ #8a6e34 60%,
+        /* Darker Gold */ #c5a059 80%,
+        /* Base Gold */ #f9d976 100% /* Light Gold */
+      );
+  background-size: 100% 100%;
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  text-shadow:
+    2px 2px 4px rgba(0, 0, 0, 0.8),
+    0px 0px 1px rgba(0, 0, 0, 0.5);
+  /* Ensure readability */
+  font-weight: bold;
+}
+
+/* Silver/Stone Grunge */
+.text-silver-grunge {
+  color: #a8a29e; /* Fallback */
+  background-image: 
+        /* Scratches/Noise Overlay */
+    repeating-linear-gradient(
+      135deg,
+      transparent 0,
+      transparent 4px,
+      rgba(0, 0, 0, 0.3) 5px,
+      rgba(0, 0, 0, 0.4) 6px
+    ),
+    repeating-linear-gradient(
+      60deg,
+      transparent 0,
+      transparent 2px,
+      rgba(255, 255, 255, 0.1) 3px,
+      transparent 4px
+    ),
+    /* Metallic Gradient */
+    linear-gradient(
+        to bottom,
+        #e7e5e4 0%,
+        /* Light Silver */ #a8a29e 30%,
+        /* Base Stone */ #57534e 60%,
+        /* Dark Stone */ #a8a29e 80%,
+        /* Base Stone */ #e7e5e4 100% /* Light Silver */
+      );
+  background-size: 100% 100%;
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  text-shadow:
+    2px 2px 4px rgba(0, 0, 0, 1),
+    0px 0px 1px rgba(0, 0, 0, 0.8);
+  font-weight: bold;
+}
+
+/* Gold Grunge for Body Text */
+/* Gold Grunge for Body Text */
+.text-gold-grunge-body {
+  color: #c5a059;
+  background-image:
+    repeating-linear-gradient(
+      115deg,
+      transparent 0,
+      transparent 5px,
+      rgba(0, 0, 0, 0.2) 6px,
+      rgba(0, 0, 0, 0.3) 7px
+    ),
+    repeating-linear-gradient(
+      45deg,
+      transparent 0,
+      transparent 3px,
+      rgba(255, 255, 255, 0.1) 4px,
+      transparent 5px
+    ),
+    linear-gradient(
+      to bottom,
+      #f9d976 0%,
+      #c5a059 30%,
+      #8a6e34 60%,
+      #c5a059 80%,
+      #f9d976 100%
+    );
+  background-size: 100% 100%;
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  text-shadow: none; /* Text shadow can interfere with transparent text in some renderers, using filter instead if needed, or keeping it subtle */
+  filter: drop-shadow(
+    1px 1px 1px rgba(0, 0, 0, 0.8)
+  ); /* Better alternative for transparent text */
+  font-weight: 500;
+}
+
+/* Silver Grunge for Body Text */
+.text-silver-grunge-body {
+  color: #a8a29e;
+  background-image:
+    repeating-linear-gradient(
+      135deg,
+      transparent 0,
+      transparent 4px,
+      rgba(0, 0, 0, 0.3) 5px,
+      rgba(0, 0, 0, 0.4) 6px
+    ),
+    repeating-linear-gradient(
+      60deg,
+      transparent 0,
+      transparent 2px,
+      rgba(255, 255, 255, 0.1) 3px,
+      transparent 4px
+    ),
+    linear-gradient(
+      to bottom,
+      #e7e5e4 0%,
+      #a8a29e 30%,
+      #78716c 60%,
+      #a8a29e 80%,
+      #e7e5e4 100%
+    );
+  background-size: 100% 100%;
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  filter: drop-shadow(1px 1px 1px rgba(0, 0, 0, 0.8));
+  font-weight: 500;
+}

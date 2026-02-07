@@ -45,7 +45,7 @@
                         <img src="assets/logo.png" alt="Age of Sosaria Logo"
                             class="h-12 md:h-20 w-auto drop-shadow-lg filter brightness-110">
                         <h1
-                            class="font-medieval text-2xl md:text-4xl text-sosaria-gold tracking-widest drop-shadow-[0_2px_4px_rgba(0,0,0,1)]">
+                            class="font-medieval text-2xl md:text-4xl text-gold-grunge tracking-widest drop-shadow-[0_2px_4px_rgba(0,0,0,1)]">
                             Age of Sosaria
                         </h1>
                     </div>
@@ -73,6 +73,9 @@
                             <li><a href="rules.html"
                                     class="nav-link hover:text-sosaria-gold hover:scale-105 transition-all duration-300">Rules</a>
                             </li>
+                            <li><a href="donate.html"
+                                    class="nav-link hover:text-sosaria-gold hover:scale-105 transition-all duration-300">Donate</a>
+                            </li>
                             <li><a href="contact.html"
                                     class="nav-link hover:text-sosaria-gold hover:scale-105 transition-all duration-300">Contact
                                     Us</a></li>
@@ -95,7 +98,7 @@
                         <div class="flex items-center justify-between p-6 border-b border-white/5 bg-black/50">
                             <div class="flex items-center gap-3">
                                 <img src="assets/logo.png" alt="Logo" class="h-10 w-auto">
-                                <span class="font-medieval text-xl text-sosaria-gold tracking-widest">Age of
+                                <span class="font-medieval text-xl text-gold-grunge tracking-widest">Age of
                                     Sosaria</span>
                             </div>
                             <button id="close-menu-btn" class="text-stone-400 hover:text-white transition-colors">
@@ -121,6 +124,8 @@
                                     Started</a>
                                 <a href="rules.html"
                                     class="nav-link mobile-link text-4xl font-light tracking-tighter text-stone-300 transition-all duration-300 hover:text-sosaria-gold hover:italic hover:translate-x-2">Rules</a>
+                                <a href="donate.html"
+                                    class="nav-link mobile-link text-4xl font-light tracking-tighter text-stone-300 transition-all duration-300 hover:text-sosaria-gold hover:italic hover:translate-x-2">Donate</a>
                                 <a href="contact.html"
                                     class="nav-link mobile-link text-4xl font-light tracking-tighter text-stone-300 transition-all duration-300 hover:text-sosaria-gold hover:italic hover:translate-x-2">Contact
                                     Us</a>
@@ -150,41 +155,181 @@
 
             <main class="min-h-[80vh] flex flex-col items-center justify-center px-4 text-center">
                 <section
-                    class="max-w-4xl space-y-8 backdrop-blur-sm bg-black/60 p-8 md:p-12 rounded-xl border border-white/5 shadow-2xl w-full">
-                    <h1 class="font-medieval text-4xl md:text-5xl text-sosaria-gold mb-8 drop-shadow-md">Contact Us</h1>
+                    class="max-w-6xl space-y-8 backdrop-blur-sm bg-black/60 p-8 md:p-12 rounded-xl border border-white/5 shadow-2xl w-full">
+                    <h1 class="font-medieval text-4xl md:text-5xl text-gold-grunge mb-8 drop-shadow-md">Contact &
+                        Support</h1>
 
-                    <p class="text-stone-300 text-lg font-body mb-8">Need assistance? The team is here to help.</p>
+                    <!-- Discord Section -->
+                    <div class="space-y-6 mb-12">
+                        <p class="text-silver-grunge-body text-lg font-body leading-relaxed max-w-2xl mx-auto">
+                            The fastest and most reliable way to get help is through our Discord. Staff members are
+                            active there and can assist with most issues.
+                        </p>
+                        <a href="https://discord.gg/yourinvitecode" target="_blank"
+                            class="inline-block px-8 py-3 bg-[#5865F2] hover:bg-[#4752C4] text-white font-medieval font-bold text-lg rounded transition-all duration-300 transform hover:scale-105 shadow-lg drop-shadow-md">
+                            Join Our Discord
+                        </a>
+                    </div>
 
-                    <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
-                        <div class="p-6 bg-white/5 rounded-lg border border-white/10 flex flex-col items-center">
-                            <div class="text-sosaria-gold text-4xl mb-4">
-                                <svg xmlns="http://www.w3.org/2000/svg" class="h-12 w-12" fill="none"
-                                    viewBox="0 0 24 24" stroke="currentColor">
-                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5"
-                                        d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
-                                </svg>
-                            </div>
-                            <h3 class="font-medieval text-xl text-white mb-2">Email Support</h3>
-                            <p class="text-stone-400 text-sm mb-4">For account issues and general inquiries.</p>
-                            <a href="mailto:support@ageofsosaria.com"
-                                class="text-sosaria-gold hover:underline">support@ageofsosaria.com</a>
+                    <div class="w-full h-px bg-white/10 my-12"></div>
+
+                    <!-- Contact Form & Owner Info Grid -->
+                    <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 text-left">
+
+                        <!-- Contact Form -->
+                        <div class="bg-black/40 p-8 rounded-lg border border-white/10">
+                            <h2 class="font-medieval text-2xl text-gold-grunge mb-6">Send a Message</h2>
+                            <form id="contactForm" class="space-y-4">
+                                <div>
+                                    <label for="name"
+                                        class="block text-silver-grunge-body text-sm font-bold mb-2 font-medieval tracking-wider">Name</label>
+                                    <input type="text" id="name" name="name"
+                                        class="w-full bg-black/60 border border-white/10 rounded px-4 py-3 text-stone-200 focus:outline-none focus:border-sosaria-gold transition-colors placeholder-stone-600"
+                                        placeholder="Your Name">
+                                    <p id="error-name" class="text-red-500 text-xs mt-1 hidden"></p>
+                                </div>
+                                <div>
+                                    <label for="email"
+                                        class="block text-silver-grunge-body text-sm font-bold mb-2 font-medieval tracking-wider">Email</label>
+                                    <input type="email" id="email" name="email"
+                                        class="w-full bg-black/60 border border-white/10 rounded px-4 py-3 text-stone-200 focus:outline-none focus:border-sosaria-gold transition-colors placeholder-stone-600"
+                                        placeholder="your@email.com">
+                                    <p id="error-email" class="text-red-500 text-xs mt-1 hidden"></p>
+                                </div>
+                                <div>
+                                    <label for="subject"
+                                        class="block text-silver-grunge-body text-sm font-bold mb-2 font-medieval tracking-wider">Subject</label>
+                                    <input type="text" id="subject" name="subject"
+                                        class="w-full bg-black/60 border border-white/10 rounded px-4 py-3 text-stone-200 focus:outline-none focus:border-sosaria-gold transition-colors placeholder-stone-600"
+                                        placeholder="Topic of inquiry">
+                                    <p id="error-subject" class="text-red-500 text-xs mt-1 hidden"></p>
+                                </div>
+                                <div>
+                                    <label for="message"
+                                        class="block text-silver-grunge-body text-sm font-bold mb-2 font-medieval tracking-wider">Message</label>
+                                    <textarea id="message" name="message" rows="5"
+                                        class="w-full bg-black/60 border border-white/10 rounded px-4 py-3 text-stone-200 focus:outline-none focus:border-sosaria-gold transition-colors placeholder-stone-600"
+                                        placeholder="How can we help?"></textarea>
+                                    <p id="error-message" class="text-red-500 text-xs mt-1 hidden"></p>
+                                </div>
+                                <button type="submit"
+                                    class="w-full px-8 py-3 bg-sosaria-gold text-black font-medieval font-bold text-lg rounded hover:bg-white transition-all duration-300 shadow-[0_0_15px_rgba(197,160,89,0.3)] mt-2">
+                                    Send Message
+                                </button>
+                            </form>
+                            <p id="success-message" class="text-green-400 text-sm mt-4 text-center hidden font-bold">
+                                Message sent successfully! (Check Console)</p>
                         </div>
 
-                        <div class="p-6 bg-white/5 rounded-lg border border-white/10 flex flex-col items-center">
-                            <div class="text-sosaria-gold text-4xl mb-4">
-                                <svg xmlns="http://www.w3.org/2000/svg" class="h-12 w-12" fill="none"
-                                    viewBox="0 0 24 24" stroke="currentColor">
-                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5"
-                                        d="M17 8h2a2 2 0 012 2v6a2 2 0 01-2 2h-2v4l-4-4H9a1.994 1.994 0 01-1.414-.586m0 0L11 14h4a2 2 0 002-2V6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2v4l.586-.586z" />
-                                </svg>
+                        <!-- Manual Contact Info -->
+                        <div class="flex flex-col justify-center space-y-8">
+                            <div>
+                                <h3 class="font-medieval text-2xl text-gold-grunge mb-4">Contact the Owner</h3>
+                                <p class="text-silver-grunge-body text-sm leading-relaxed mb-6">
+                                    If you need to reach the owner directly, you may use the contact information below
+                                    as an alternative.
+                                </p>
                             </div>
-                            <h3 class="font-medieval text-xl text-white mb-2">Discord</h3>
-                            <p class="text-stone-400 text-sm mb-4">Live chat with staff and players.</p>
-                            <a href="#"
-                                class="px-4 py-2 bg-[#5865F2] text-white rounded font-bold hover:bg-[#4752C4] transition-colors">Join
-                                Discord</a>
+
+                            <div class="space-y-6">
+                                <div class="flex items-start gap-4">
+                                    <div class="p-3 bg-white/5 rounded-full text-sosaria-gold">
+                                        <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none"
+                                            viewBox="0 0 24 24" stroke="currentColor">
+                                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                                d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
+                                        </svg>
+                                    </div>
+                                    <div>
+                                        <h4 class="text-silver-grunge-body font-bold font-medieval tracking-wide">Email
+                                        </h4>
+                                        <a href="mailto:adezaris@mail.ageofsosaria.com"
+                                            class="text-stone-400 hover:text-sosaria-gold transition-colors block mt-1">
+                                            adezaris@mail.ageofsosaria.com
+                                        </a>
+                                    </div>
+                                </div>
+
+                                <div class="flex items-start gap-4">
+                                    <div class="p-3 bg-white/5 rounded-full text-sosaria-gold">
+                                        <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="currentColor"
+                                            viewBox="0 0 24 24">
+                                            <path
+                                                d="M20.317 4.37a19.791 19.791 0 0 0-4.885-1.515.074.074 0 0 0-.079.037c-.21.375-.444.864-.608 1.25a18.27 18.27 0 0 0-5.487 0 12.64 12.64 0 0 0-.617-1.25.077.077 0 0 0-.079-.037A19.736 19.736 0 0 0 3.677 4.37a.07.07 0 0 0-.032.027C.533 9.046-.32 13.58.099 18.057a.082.082 0 0 0 .031.057 19.9 19.9 0 0 0 5.993 3.03.078.078 0 0 0 .084-.028 14.09 14.09 0 0 0 1.226-1.994.076.076 0 0 0-.041-.106 13.107 13.107 0 0 1-1.872-.892.077.077 0 0 1-.008-.128 10.2 10.2 0 0 0 .372-.292.074.074 0 0 1 .077-.01c3.928 1.793 8.18 1.793 12.062 0a.074.074 0 0 1 .078.01c.12.098.246.198.373.292a.077.077 0 0 1-.006.127 12.299 12.299 0 0 1-1.873.892.077.077 0 0 0-.041.107c.36.698.772 1.362 1.225 1.993a.076.076 0 0 0 .084.028 19.839 19.839 0 0 0 6.002-3.03.077.077 0 0 0 .032-.054c.5-5.177-.838-9.674-3.549-13.66a.061.061 0 0 0-.031-.03z" />
+                                        </svg>
+                                    </div>
+                                    <div>
+                                        <h4 class="text-silver-grunge-body font-bold font-medieval tracking-wide">
+                                            Discord</h4>
+                                        <span class="text-stone-400 block mt-1">Adezaris#1090</span>
+                                    </div>
+                                </div>
+                            </div>
                         </div>
                     </div>
+
+                    <!-- Script for Form Validation -->
+                    <script type="module">
+                        import { z } from "https://esm.sh/zod";
+
+                        const contactSchema = z.object({
+                            name: z.string().min(2, "Name must be at least 2 characters"),
+                            email: z.string().email("Invalid email address"),
+                            subject: z.string().min(5, "Subject must be at least 5 characters"),
+                            message: z.string().min(10, "Message must be at least 10 characters")
+                        });
+
+                        const form = document.getElementById('contactForm');
+
+                        form.addEventListener('submit', async (e) => {
+                            e.preventDefault();
+
+                            // Reset errors
+                            ['name', 'email', 'subject', 'message'].forEach(field => {
+                                const errorEl = document.getElementById(`error-${field}`);
+                                errorEl.classList.add('hidden');
+                                errorEl.textContent = '';
+                                document.getElementById(field).classList.remove('border-red-500');
+                            });
+                            document.getElementById('success-message').classList.add('hidden');
+
+                            // Gather data
+                            const formData = new FormData(form);
+                            const data = Object.fromEntries(formData.entries());
+
+                            // Validate
+                            const result = contactSchema.safeParse(data);
+
+                            if (!result.success) {
+                                // Show errors
+                                result.error.issues.forEach(issue => {
+                                    const field = issue.path[0];
+                                    const errorEl = document.getElementById(`error-${field}`);
+                                    if (errorEl) {
+                                        errorEl.textContent = issue.message;
+                                        errorEl.classList.remove('hidden');
+                                        document.getElementById(field).classList.add('border-red-500');
+                                    }
+                                });
+                            } else {
+                                // Success - Ajax simulation
+                                console.log('Form Submitted Successfully:', result.data);
+
+                                // Simulate network request
+                                const submitBtn = form.querySelector('button[type="submit"]');
+                                const originalText = submitBtn.textContent;
+                                submitBtn.disabled = true;
+                                submitBtn.textContent = 'Sending...';
+
+                                setTimeout(() => {
+                                    document.getElementById('success-message').classList.remove('hidden');
+                                    form.reset();
+                                    submitBtn.disabled = false;
+                                    submitBtn.textContent = originalText;
+                                }, 1000);
+                            }
+                        });
+                    </script>
                 </section>
             </main>
 
