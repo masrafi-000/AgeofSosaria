@@ -25,6 +25,7 @@
     <link
         href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;700&family=Lora:ital,wght@0,400;0,700;1,400&display=swap"
         rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
     <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
     <title>Age of Sosaria</title>
 
@@ -38,13 +39,14 @@
 
         <div class="relative z-10 container mx-auto">
             <header
-                class="w-full pt-4 pb-4 border-b border-white/10 bg-gradient-to-b from-black/80 to-transparent relative z-50">
-                <nav class="flex flex-col items-center justify-between px-6 md:px-12">
+                class="w-full pt-4 pb-4 border-b border-white/10 bg-gradient-to-b from-black/40 to-transparent relative z-50">
+                <nav class="flex md:flex-col items-center justify-between px-6 md:px-12">
                     <!-- Logo -->
                     <div class="flex items-center items-center gap-4 z-50 px-4">
                         <img src="assets/logo.png" alt="Age of Sosaria Logo"
-                            class="h-12 md:h-20 w-auto drop-shadow-lg filter brightness-110">
-                        <h1 class="font-medieval text-2xl md:text-4xl text-gold-grunge tracking-widest">
+                            class="h-12 md:h-20 w-auto drop-shadow-lg filter brightness-200">
+                        <h1
+                            class="font-medieval text-2xl md:text-4xl text-gold-grunge brightness-200 tracking-widest drop-shadow-[0_2px_4px_rgba(0,0,0,1)]">
                             Age of Sosaria
                         </h1>
                     </div>
@@ -96,8 +98,9 @@
                         <!-- Internal Header (Logo + Close Button) -->
                         <div class="flex items-center justify-between p-6 border-b border-white/5 bg-black/50">
                             <div class="flex items-center gap-3">
-                                <img src="assets/logo.png" alt="Logo" class="h-10 w-auto">
-                                <span class="font-medieval text-xl text-gold-grunge tracking-widest">Age of
+                                <img src="assets/logo.png" alt="Logo" class="h-10 w-auto brightness-200">
+                                <span class="font-medieval text-xl text-gold-grunge brightness-200 tracking-widest">Age
+                                    of
                                     Sosaria</span>
                             </div>
                             <button id="close-menu-btn" class="text-stone-400 hover:text-white transition-colors">
@@ -155,7 +158,7 @@
             <main class="min-h-[80vh] flex flex-col items-center justify-center px-4 text-center">
                 <section
                     class="max-w-4xl space-y-8 backdrop-blur-sm bg-black/60 p-8 md:p-12 rounded-xl border border-white/5 shadow-2xl w-full">
-                    <h1 class="font-medieval text-4xl md:text-5xl text-gold-grunge mb-8 drop-shadow-md">About Age of
+                    <h1 class="font-medieval text-4xl md:text-5xl text-gold-grunge brightness-200 mb-8 drop-shadow-md">About Age of
                         Sosaria</h1>
 
                     <div class="space-y-12 text-left">
@@ -163,7 +166,7 @@
                         <!-- Intro -->
                         <div class="space-y-6">
                             <p
-                                class="text-xl md:text-2xl text-gold-grunge font-medieval tracking-wide leading-relaxed text-center">
+                                class="text-xl md:text-2xl text-gold-grunge brightness-200 font-medieval tracking-wide leading-relaxed text-center">
                                 A shard built from passion, experience, and respect for classic Ultima Online.
                             </p>
                             <p class="text-silver-grunge-body text-lg font-body leading-relaxed">
@@ -182,7 +185,7 @@
 
                         <!-- Philosophy -->
                         <div class="space-y-4">
-                            <h2 class="font-medieval text-2xl md:text-3xl text-gold-grunge mb-2">Our Philosophy</h2>
+                            <h2 class="font-medieval text-2xl md:text-3xl text-gold-grunge brightness-200 mb-2">Our Philosophy</h2>
                             <p class="text-silver-grunge-body text-lg font-body leading-relaxed">
                                 We believe the best shards are built around meaningful progression, player interaction,
                                 and a world that feels alive.
@@ -195,7 +198,7 @@
 
                         <!-- Custom, Not Chaotic -->
                         <div class="space-y-4">
-                            <h2 class="font-medieval text-2xl md:text-3xl text-gold-grunge mb-2">Custom, Not Chaotic
+                            <h2 class="font-medieval text-2xl md:text-3xl text-gold-grunge brightness-200 mb-2">Custom, Not Chaotic
                             </h2>
                             <p class="text-silver-grunge-body text-lg font-body leading-relaxed">
                                 Age of Sosaria features custom mechanics and content, but always within the spirit of
@@ -209,7 +212,7 @@
 
                         <!-- Active Development -->
                         <div class="space-y-4">
-                            <h2 class="font-medieval text-2xl md:text-3xl text-gold-grunge mb-2">Active Development
+                            <h2 class="font-medieval text-2xl md:text-3xl text-gold-grunge brightness-200 mb-2">Active Development
                             </h2>
                             <p class="text-silver-grunge-body text-lg font-body leading-relaxed">
                                 The world of Sosaria is always evolving. We regularly improve systems, add new content,
@@ -225,11 +228,11 @@
 
                         <!-- Promise -->
                         <div class="text-center space-y-6">
-                            <h2 class="font-medieval text-3xl text-gold-grunge drop-shadow-md">Our Promise</h2>
+                            <h2 class="font-medieval text-3xl text-gold-grunge brightness-200 drop-shadow-md">Our Promise</h2>
                             <p class="text-silver-grunge-body text-xl font-medieval tracking-widest uppercase">
                                 No shortcuts. No abandoned worlds.
                             </p>
-                            <p class="text-gold-grunge text-2xl font-medieval font-bold">
+                            <p class="text-gold-grunge brightness-200 text-2xl font-medieval font-bold">
                                 Just a living, breathing Sosaria—built to last.
                             </p>
                         </div>

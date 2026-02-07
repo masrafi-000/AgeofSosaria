@@ -108,10 +108,10 @@
   -webkit-background-clip: text;
   background-clip: text;
   color: transparent;
-  text-shadow: none; /* Text shadow can interfere with transparent text in some renderers, using filter instead if needed, or keeping it subtle */
+  text-shadow: none; 
   filter: drop-shadow(
     1px 1px 1px rgba(0, 0, 0, 0.8)
-  ); /* Better alternative for transparent text */
+  );
   font-weight: 500;
 }
 
