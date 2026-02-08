@@ -171,11 +171,11 @@
                         </p>
                     </div>
 
-                    <div class="grid grid-cols-1  gap-8 text-left">
+                    <div class="grid grid-cols-1 gap-8 text-left">
 
                         <!-- Quick Start -->
                         <div
-                            class="group relative overflow-hidden rounded-xl border border-sosaria-gold/50 bg-[#1a1510] shadow-[0_0_20px_rgba(197,160,89,0.1)]">
+                            class="group relative overflow-hidden rounded-xl border border-sosaria-gold/50 bg-[#1a1510] shadow-[0_0_20px_rgba(197,160,89,0.1)] h-full flex flex-col">
                             <!-- Background Image -->
                             <div
                                 class="absolute inset-0 bg-[url('assets/section-bg.png')] bg-cover bg-center opacity-20 group-hover:opacity-30 transition-opacity duration-300">
@@ -215,7 +215,7 @@
                                 </ul>
 
                                 <a href="#"
-                                    class="mt-8 block w-full py-4 text-center bg-sosaria-gold text-black font-medieval text-xl font-bold rounded hover:bg-white transition-colors shadow-lg hover:shadow-sosaria-gold/50">
+                                    class="mt-8 block w-fit px-10 py-4 text-center  text-gold-grunge brightness-200 font-medieval text-xl font-bold rounded border border-sosaria-gold/50 transition-transform  hover:scale-105 shadow-lg duration-400 uppercase tracking-widest">
                                     Download Installer
                                 </a>
                             </div>
@@ -223,7 +223,7 @@
 
                         <!-- Manual Installation -->
                         <div
-                            class="group relative overflow-hidden rounded-xl border border-white/10 bg-[#1a1510] hover:border-white/30 transition-colors">
+                            class="group relative overflow-hidden rounded-xl border border-white/10 bg-[#1a1510] hover:border-white/30 transition-colors h-full flex flex-col">
                             <div
                                 class="absolute inset-0 bg-[url('assets/section-bg.png')] bg-cover bg-center opacity-10 group-hover:opacity-20 transition-opacity duration-300">
                             </div>
@@ -235,83 +235,48 @@
                                         class="text-xs font-sans text-stone-600 align-middle ml-2 tracking-widest uppercase">(Advanced
                                         Users)</span></h2>
 
-                                <h1
-                                    class="font-medieval text-4xl md:text-5xl text-gold-grunge brightness-200 mb-8 drop-shadow-md">
-                                    Getting Started</h1>
-
-                                <div class="grid md:grid-cols-1 gap-8 text-left">
-                                    <!-- Step 1 -->
-                                    <div
-                                        class="p-6 bg-black/40 rounded-lg border border-white/10 hover:border-sosaria-gold/50 transition-colors duration-300">
-                                        <h2 class="font-medieval text-2xl text-gold-grunge brightness-200 mb-4">1.
-                                            Download & Install
-                                        </h2>
-                                        <p class="text-silver-grunge-body leading-relaxed">
-                                            Use the classic client or enhanced client. We recommend the <span
-                                                class="text-gold-grunge brightness-200">ClassicUO</span> launcher for
-                                            the best
-                                            experience.
-                                            Download the launcher and point it to our server address.
-                                        </p>
-                                        <a href="#"
-                                            class="text-gold-grunge brightness-200 hover:underline mt-4 inline-block font-bold">Download
-                                            Launcher &rarr;</a>
-                                    </div>
-
-                                    <!-- Step 2 -->
-                                    <div
-                                        class="p-6 bg-black/40 rounded-lg border border-white/10 hover:border-sosaria-gold/50 transition-colors duration-300">
-                                        <h2 class="font-medieval text-2xl text-gold-grunge brightness-200 mb-4">2.
-                                            Create Account</h2>
-                                        <p class="text-silver-grunge-body leading-relaxed">
-                                            Accounts are automatically created on your first login. Choose a username
-                                            and password
-                                            that you will remember.
-                                        </p>
-                                        <p class="text-xs text-silver-grunge-body italic mt-2">* One account per IP
-                                            address allowed.</p>
-                                    </div>
-
-                                    <!-- Step 3 -->
-                                    <div
-                                        class="p-6 bg-black/40 rounded-lg border border-white/10 hover:border-sosaria-gold/50 transition-colors duration-300">
-                                        <h2 class="font-medieval text-2xl text-gold-grunge brightness-200 mb-4">3. Join
-                                            Discord</h2>
-                                        <p class="text-silver-grunge-body leading-relaxed">
-                                            Stay connected with the community, get support, and see the latest patch
-                                            notes.
-                                        </p>
-                                        <a href="#"
-                                            class="text-gold-grunge brightness-200 hover:underline mt-4 inline-block font-bold">Join
-                                            Discord
-                                            &rarr;</a>
-                                    </div>
-
-                                    <!-- Step 4 -->
-                                    <div
-                                        class="p-6 bg-black/40 rounded-lg border border-white/10 hover:border-sosaria-gold/50 transition-colors duration-300">
-                                        <h2 class="font-medieval text-2xl text-gold-grunge brightness-200 mb-4">4.
-                                            Server Rules</h2>
-                                        <p class="text-silver-grunge-body leading-relaxed">
-                                            Before you begin, familiarize yourself with our server rules to ensure a
-                                            fair environment for everyone.
-                                        </p>
-                                        <a href="rules.html"
-                                            class="text-gold-grunge brightness-200 hover:underline mt-4 inline-block font-bold">Read
-                                            Rules
-                                            &rarr;</a>
-                                    </div>
-                                </div class="text-gold-grunge brightness-200"> Join our community Discord. <br>
-                                Ask other players or staff for assistance.
-                                </p>
-                                <div class="pt-4">
-                                    <a href="#"
-                                        class="inline-block px-8 py-3 border border-sosaria-gold/30 text-sosaria-gold font-medieval hover:bg-sosaria-gold hover:text-black transition-all duration-300 rounded uppercase tracking-wider text-sm font-bold">
-                                        Join Discord
-                                    </a>
-                                </div>
+                                <ul class="space-y-6 font-body text-stone-300 flex-1">
+                                    <li class="flex gap-4 items-start">
+                                        <span
+                                            class="flex-shrink-0 w-8 h-8 rounded-full bg-[#0a0a0a] border border-white/10 text-stone-500 font-bold flex items-center justify-center font-medieval">1</span>
+                                        <span class="mt-1">Install a compatible <strong class="text-white">Ultima
+                                                Online client</strong>.</span>
+                                    </li>
+                                    <li class="flex gap-4 items-start">
+                                        <span
+                                            class="flex-shrink-0 w-8 h-8 rounded-full bg-[#0a0a0a] border border-white/10 text-stone-500 font-bold flex items-center justify-center font-medieval">2</span>
+                                        <span class="mt-1">Download and install <strong
+                                                class="text-white">ClassicUO</strong> (recommended).</span>
+                                    </li>
+                                    <li class="flex gap-4 items-start">
+                                        <span
+                                            class="flex-shrink-0 w-8 h-8 rounded-full bg-[#0a0a0a] border border-white/10 text-stone-500 font-bold flex items-center justify-center font-medieval">3</span>
+                                        <span class="mt-1">Point your client to the <strong class="text-white">Age
+                                                of Sosaria</strong> server.</span>
+                                    </li>
+                                    <li class="flex gap-4 items-start">
+                                        <span
+                                            class="flex-shrink-0 w-8 h-8 rounded-full bg-[#0a0a0a] border border-white/10 text-stone-500 font-bold flex items-center justify-center font-medieval">4</span>
+                                        <span class="mt-1">Launch the game and <strong class="text-white">log
+                                                in</strong>.</span>
+                                    </li>
+                                </ul>
                             </div>
                         </div>
+                    </div>
+
+                    <!-- Need Help -->
+                    <div class="relative z-10 pt-8 text-center">
+                        <h2 class="font-medieval text-3xl text-gold-grunge brightness-200 mb-6">Need Help?</h2>
+                        <p class="text-stone-300 text-lg mb-8">
+                            Join our community Discord. <br>
+                            Ask other players or staff for assistance.
+                        </p>
+                        <a href="#"
+                            class="inline-block px-12 py-4 bg-black text-gold-grunge brightness-150 font-medieval font-bold text-xl rounded border border-sosaria-gold/50 hover:bg-[#1a1510] transition-all duration-300 shadow-lg hover:shadow-sosaria-gold/50 uppercase tracking-widest">
+                            Join Discord
+                        </a>
+                    </div>
 
                 </section>
             </main>
